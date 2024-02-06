@@ -1,0 +1,32 @@
+html {
+  background-color: aqua;
+  height: 100vw;
+}
+.inputBox {
+  margin: 10px;
+  padding: 5px;
+  border: groove gray 10px;
+  border-radius: 10px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#body_box {
+  position: relative;
+  width: fit-content;
+  background-color: blue;
+}
+#newSticky {
+  position: relative;
+  margin: 100px;
+  padding: 50px;
+  display: flex;
+
+  flex-direction: column;
+}
+#edit_input {
+  display: flex;
+  justify-content: end;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script
+         type="module"
+         src="{{ url_for('static', filename='js/login.js') }}"
+         async
+         defer
+      ></script>
+      
+</head>
+    <body id="body_box">    
+
+      <form action="/login" method="post" id="loginForm">
+         <p><h3>Enter username</h3></p>
+         <p><input type="text" name="loguser" class="loguser" id="loguser"/></p>
+         <p><h3>Enter password</h3></p>
+         <p><input type="password" name="logpass" class="logpass"/></p>
+         <p><input type="submit" value='Login' id="log_in_btn" class="submitBtn"/></p>
+     </form>
+
+      <form action="/signup" method="post" id="signUpForm">
+        <p><h3>Enter username</h3></p>
+        <p><input type = "text" name = "signuser" id="signuser"/></p>
+        <p><h3>Enter password</h3></p>
+        <p><input type = "password" name = "signpass" id="signpass"/></p>
+        <p><input type = "submit" value = 'Sign up' id="sign_up_btn" class="submitBtn"/></p>
+      </form>
+
+
+       
+      <script
+         type="module"
+         src="{{ url_for('static', filename='js/script.js') }}"
+         
+      ></script>
+   </body>
+</html>
+

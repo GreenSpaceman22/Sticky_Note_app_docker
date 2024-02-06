@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:mso="urn:schemas-microsoft-com:office:office"
+  xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Note Sticky App</title>
+
+    <!-- Link to our CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div id="body_box"></div>
+    <div id="paragraph_container" class="container">
+      <div>
+        <div>
+          {% set json_data = returned_note %} {% set my_message = json_data |
+          safe %} {% for note_item in my_message.Note %}
+          <p>{{ note_item }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <form action="/logout" method="post">
+      <p><button type="submit">Log-out</button></p>
+    </form>
+
+    <script
+      type="module"
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+  </body>
+</html>
